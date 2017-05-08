@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
+
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>simple app</title>
 		<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
 	</head>
+
 	<body ng-controller="myControl">
 		<ul class="nav nav-pills">
-		  <li class="active" ng-repeat="container in app.containers">
-		    <a>
-		    	容器{{$index+1}}
-		    	<em class="icon-remove" ng-click="del($index)" ng-if="app.containers.length!=1"></em>
-		    </a>
-		  </li>
-		  <li>
-		  	<a ng-click="add()">
-		  		<em class="icon-plus"></em>
-		  	</a>
-		  </li>
+			<li class="active" ng-repeat="container in app.containers">
+				<a>
+					容器{{$index+1}}
+					<em class="icon-remove" ng-click="del($index)" ng-if="app.containers.length!=1"></em>
+				</a>
+			</li>
+			<li>
+				<a ng-click="add()">
+					<em class="icon-plus"></em>
+				</a>
+			</li>
 		</ul>
-		<script type="text/javascript" src="../require_js/jquery.js" ></script>
+		<script type="text/javascript" src="../require_js/jquery.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
 		<script src="../require_js/angular.js"></script>
-		<script type="text/javascript" src="angularjs_1.js" ></script>
+		<script type="text/javascript" src="angularjs_1.js"></script>
 	</body>
+
 </html>
